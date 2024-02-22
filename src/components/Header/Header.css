@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+    >:nth-child(n) {
+        display: flex;
+        align-items: center;
+        column-gap: 3.5rem;
+    }
+
+    ul {
+        display: flex;
+        column-gap: 2rem;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
