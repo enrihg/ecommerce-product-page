@@ -1,0 +1,21 @@
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr-200);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    >button {
+        border: none;
+        background: none;
+        color: var(--clr-primary-400);
+        padding: 0.5rem;
+    }
+
+    >span {
+        font-weight: 700;
+        color: var(--clr-900);
+    }
+}
