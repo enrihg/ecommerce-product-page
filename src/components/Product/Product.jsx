@@ -1,15 +1,35 @@
 import Counter from '../Counter/Counter';
 import './Product.css';
-import img1Thumb from '../../assets/images/image-product-1-thumbnail.jpg'
+import img1 from '../../assets/images/image-product-1.jpg'
+import img2 from '../../assets/images/image-product-2.jpg'
+import img3 from '../../assets/images/image-product-3.jpg'
+import img4 from '../../assets/images/image-product-4.jpg'
 import iconCart from '../../assets/images/icon-cart.svg';
+import previous from '../../assets/images/icon-previous.svg';
+import next from '../../assets/images/icon-next.svg';
+
+let container = document.querySelector('.images-container');
+
+function previousPicture() {
+    container.scrollLeft += -375;
+}
+
+function nextPicture() {
+    container.scrollLeft += 375;
+}
 
 function Product() {
     return (
         <div className='product-container'>
             <section className='product-images'>
-                <button>arrow</button>
-                <img src={img1Thumb} alt="product image" />
-                <button>arrow</button>
+                <button onClick={previousPicture} className='button-previous'><img src={previous} alt="go to previous image" /></button>
+                <div className='images-container'>
+                    <img className='product-image' src={img1} alt="product image" />
+                    <img className='product-image' src={img2} alt="product image" />
+                    <img className='product-image' src={img3} alt="product image" />
+                    <img className='product-image' src={img4} alt="product image" />
+                </div>
+                <button onClick={nextPicture} className='button-next'><img src={next} alt="go to next image" /></button>
             </section>
             <section className='product-description'>
                 <h2>SNEAKER COMPANY</h2>
@@ -23,8 +43,8 @@ function Product() {
                     <span className='discount'>50%</span>
                     <span className='price-full'><s>$250.00</s></span>
                 </div>
-                <Counter/>
-                <button className='addToCart'><img src={iconCart} alt="shopping cart"/>Add to cart</button>
+                <Counter />
+                <button className='addToCart'><img src={iconCart} alt="shopping cart" />Add to cart</button>
             </section>
         </div>
     )
