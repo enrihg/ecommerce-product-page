@@ -26,16 +26,18 @@
     .images-container {
         display: flex;
         max-width: 100%;
-
         overflow-x: scroll; /*sfsdfsfsss*/
+        scroll-behavior: smooth;
+    }
+
+    .images-container::-webkit-scrollbar {
+        display: none;
     }
 
     .product-image {
         max-width: 100%;
         transition: 0.5s;
     }
-
-
 }
 
 .product-description {

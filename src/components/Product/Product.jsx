@@ -8,14 +8,19 @@ import iconCart from '../../assets/images/icon-cart.svg';
 import previous from '../../assets/images/icon-previous.svg';
 import next from '../../assets/images/icon-next.svg';
 
-let container = document.querySelector('.images-container');
+// let container = document.querySelector('.images-container');
 
-function previousPicture() {
-    container.scrollLeft += -375;
+const previousPicture = () => {
+    let container = document.querySelector('.images-container');
+    // container.scrollLeft += -375;
+    container.scrollLeft += -(container.scrollWidth)/4; /*aaa */
+    
 }
 
-function nextPicture() {
-    container.scrollLeft += 375;
+const nextPicture = () => {
+    let container = document.querySelector('.images-container');
+    // container.scrollLeft += 375;
+    container.scrollLeft += (container.scrollWidth)/4; /*aaa */
 }
 
 function Product() {
