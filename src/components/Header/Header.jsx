@@ -5,10 +5,16 @@ import avatar from '../../assets/images/image-avatar.png';
 import './Header.css';
 
 function Header() {
+
+    const toggleCart = () => {
+        const cart = document.querySelector('.cart');
+        cart.style.display = cart.style.display === 'none' ? 'grid' : 'none';
+    }
+
     return (
         <header className='header'>
             <div>
-                <button><img src={iconMenu} alt="menu icon"/></button>
+                <button><img src={iconMenu} alt="menu icon" /></button>
                 <img src={logo} alt="logo" />
                 <nav className='navbar'>
                     <ul>
@@ -21,7 +27,7 @@ function Header() {
                 </nav>
             </div>
             <div>
-                <button><img src={iconCart} alt="shopping cart" /></button>
+                <button onClick={toggleCart}><img src={iconCart} alt="shopping cart" /></button>
                 <button><img src={avatar} alt="my profile" /></button>
             </div>
         </header>

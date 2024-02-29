@@ -1,4 +1,5 @@
 import Counter from '../Counter/Counter';
+import Cart from '../Cart/Cart';
 import './Product.css';
 import img1 from '../../assets/images/image-product-1.jpg'
 import img2 from '../../assets/images/image-product-2.jpg'
@@ -13,20 +14,21 @@ import next from '../../assets/images/icon-next.svg';
 const previousPicture = () => {
     let container = document.querySelector('.images-container');
     // container.scrollLeft += -375;
-    container.scrollLeft += -(container.scrollWidth)/4; /*aaa */
-    
+    container.scrollLeft += -(container.scrollWidth) / 4; /*aaa */
+
 }
 
 const nextPicture = () => {
     let container = document.querySelector('.images-container');
     // container.scrollLeft += 375;
-    container.scrollLeft += (container.scrollWidth)/4; /*aaa */
+    container.scrollLeft += (container.scrollWidth) / 4; /*aaa */
 }
 
 function Product() {
     return (
         <div className='product-container'>
             <section className='product-images'>
+                <Cart />
                 <button onClick={previousPicture} className='button-previous'><img src={previous} alt="go to previous image" /></button>
                 <div className='images-container'>
                     <img className='product-image' src={img1} alt="product image" />

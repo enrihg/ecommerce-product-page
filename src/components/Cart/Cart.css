@@ -1,0 +1,27 @@
+.cart {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    width: 95%;
+    height: 90%;
+    justify-self: center;
+    background-color: var(--clr-100);
+    z-index: 2;
+    margin-top: 2%;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    border-radius: 10px;
+
+    >div {
+        font-weight: 700;
+        color: var(--clr-900);
+        border-bottom: 1px solid var(--clr-200);
+        padding-bottom: 1.5rem;
+    }
+
+    >p {
+        font-weight: 700;
+        color: var(--clr-700);
+        align-self: center;
+        text-align: center;
+    }
+}
