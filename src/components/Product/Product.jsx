@@ -5,18 +5,22 @@ import img1 from '../../assets/images/image-product-1.jpg'
 import img2 from '../../assets/images/image-product-2.jpg'
 import img3 from '../../assets/images/image-product-3.jpg'
 import img4 from '../../assets/images/image-product-4.jpg'
+import img1Thumb from '../../assets/images/image-product-1-thumbnail.jpg'
+import img2Thumb from '../../assets/images/image-product-2-thumbnail.jpg'
+import img3Thumb from '../../assets/images/image-product-3-thumbnail.jpg'
+import img4Thumb from '../../assets/images/image-product-4-thumbnail.jpg'
 import iconCart from '../../assets/images/icon-cart.svg';
 import previous from '../../assets/images/icon-previous.svg';
 import next from '../../assets/images/icon-next.svg';
 
-function Product({addedItems}) {
+function Product({ addedItems }) {
 
     let container;
     const previousPicture = () => {
         container = document.querySelector('.images-container');
         container.scrollLeft += -(container.scrollWidth) / 4; /*aaa */
     }
-    
+
     const nextPicture = () => {
         container = document.querySelector('.images-container');
         container.scrollLeft += (container.scrollWidth) / 4; /*aaa */
@@ -33,11 +37,11 @@ function Product({addedItems}) {
                     <img className='product-image' src={img4} alt="product image" />
                 </div>
                 <button onClick={nextPicture} className='button-next'><img src={next} alt="go to next image" /></button>
-                <div className='thumbnails'>
-                    <img src="" alt="foto1" />
-                    <img src="" alt="foto2" />
-                    <img src="" alt="foto2" />
-                    <img src="" alt="foto3" />
+                <div className='thumbnails-container'>
+                    <button className='thumbnail'><img src={img1Thumb} alt="product thumbnail" /></button>
+                    <button className='thumbnail'><img src={img2Thumb} alt="product thumbnail" /></button>
+                    <button className='thumbnail'><img src={img3Thumb} alt="product thumbnail" /></button>
+                    <button className='thumbnail'><img src={img4Thumb} alt="product thumbnail" /></button>
                 </div>
             </section>
             <section className='product-description'>

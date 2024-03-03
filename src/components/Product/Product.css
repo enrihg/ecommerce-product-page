@@ -5,8 +5,10 @@
 .product-images {
     position: relative;
     display: grid;
+    row-gap: 2.5rem;
 
-    button {
+    .button-previous,
+    .button-next {
         height: 2.5rem;
         width: 2.5rem;
         border: none;
@@ -45,9 +47,23 @@
         transition: 0.5s;
     }
 
-    .thumbnails {
+    .thumbnails-container {
         display: none;
     }
+
+    .thumbnail {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .thumbnail img {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 10px;
+    }
+
 }
 
 .product-description {
@@ -123,7 +139,16 @@
     .product-container {
         grid-template-columns: 1fr 1fr;
 
-        .thumbnails {
+        .product-image {
+            border-radius: 15px;
+        }
+
+        .button-previous,
+        .button-next {
+            display: none;
+        }
+
+        .thumbnails-container {
             display: flex;
             justify-content: space-between;
         }
@@ -151,7 +176,8 @@
 
         .counter,
         .addToCart {
-            height: max-content; /*asdfsfss*/
+            height: max-content;
+            /*asdfsfss*/
         }
     }
 
