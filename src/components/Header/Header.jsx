@@ -14,7 +14,7 @@ function Header() {
     return (
         <header className='header'>
             <div>
-                <button><img src={iconMenu} alt="menu icon" /></button>
+                <button className='menu-button'><img src={iconMenu} alt="menu icon" /></button>
                 <img src={logo} alt="logo" />
                 <nav className='navbar'>
                     <ul>
@@ -27,8 +27,8 @@ function Header() {
                 </nav>
             </div>
             <div>
-                <button onClick={toggleCart}><img src={iconCart} alt="shopping cart" /></button>
-                <button><img src={avatar} alt="my profile" /></button>
+                <button className='shopping-cart' onClick={toggleCart}><img src={iconCart} alt="shopping cart" /></button>
+                <button className='profile-avatar'><img src={avatar} alt="my profile" /></button>
             </div>
         </header>
     )
