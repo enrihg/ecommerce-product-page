@@ -135,6 +135,24 @@
     }
 }
 
+.lightbox {
+    display: grid;
+    place-items: center;
+    background-color: hsl(0, 0%, 0%, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2; /*sfdsfsfd*/
+
+    .product-images {
+        /* max-height: 50%; */
+        max-width: 50%;
+    }
+}
+
+
 @media screen and (width >=800px) {
     .product-container {
         grid-template-columns: 1fr 1fr;

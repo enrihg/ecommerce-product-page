@@ -61,6 +61,25 @@ function Product({ addedItems }) {
                     <button className='addToCart'><img src={iconCart} alt="shopping cart" />Add to cart</button>
                 </div>
             </section>
+            <section className='lightbox'>
+                <section className='product-images'>
+                    {/* <Cart /> */}
+                    <button onClick={previousPicture} className='button-previous'><img src={previous} alt="go to previous image" /></button>
+                    <div className='images-container'>
+                        <img className='product-image' src={img1} alt="product image" />
+                        <img className='product-image' src={img2} alt="product image" />
+                        <img className='product-image' src={img3} alt="product image" />
+                        <img className='product-image' src={img4} alt="product image" />
+                    </div>
+                    <button onClick={nextPicture} className='button-next'><img src={next} alt="go to next image" /></button>
+                    <div className='thumbnails-container'>
+                        <button className='thumbnail'><img src={img1Thumb} alt="product thumbnail" /></button>
+                        <button className='thumbnail'><img src={img2Thumb} alt="product thumbnail" /></button>
+                        <button className='thumbnail'><img src={img3Thumb} alt="product thumbnail" /></button>
+                        <button className='thumbnail'><img src={img4Thumb} alt="product thumbnail" /></button>
+                    </div>
+                </section>
+            </section>
         </div>
     )
 }
