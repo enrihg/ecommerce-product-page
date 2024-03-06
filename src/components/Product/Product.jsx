@@ -9,11 +9,12 @@ import img1Thumb from '../../assets/images/image-product-1-thumbnail.jpg'
 import img2Thumb from '../../assets/images/image-product-2-thumbnail.jpg'
 import img3Thumb from '../../assets/images/image-product-3-thumbnail.jpg'
 import img4Thumb from '../../assets/images/image-product-4-thumbnail.jpg'
-import iconCart from '../../assets/images/icon-cart.svg';
-import previous from '../../assets/images/icon-previous.svg';
-import next from '../../assets/images/icon-next.svg';
+import iconCart from '../../assets/images/icon-cart.svg'
+import previous from '../../assets/images/icon-previous.svg'
+import next from '../../assets/images/icon-next.svg'
+import close from '../../assets/images/icon-close.svg'
 
-function Product({ addedItems }) {
+function Product() {
 
     let container;
     const previousPicture = () => {
@@ -24,6 +25,11 @@ function Product({ addedItems }) {
     const nextPicture = () => {
         container = document.querySelector('.images-container');
         container.scrollLeft += (container.scrollWidth) / 4; /*aaa */
+    }
+
+    const closeLightbox = () => {
+        const lightbox = document.querySelector('.lightbox');
+        lightbox.classList.add('close');
     }
     return (
         <div className='product-container'>
@@ -63,7 +69,7 @@ function Product({ addedItems }) {
             </section>
             <section className='lightbox'>
                 <section className='product-images'>
-                    {/* <Cart /> */}
+                    <button onClick={closeLightbox} className='button-close'><img src={close} alt="close" /></button>
                     <button onClick={previousPicture} className='button-previous'><img src={previous} alt="go to previous image" /></button>
                     <div className='images-container'>
                         <img className='product-image' src={img1} alt="product image" />

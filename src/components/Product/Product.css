@@ -147,11 +147,38 @@
     z-index: 2; /*sfdsfsfd*/
 
     .product-images {
-        /* max-height: 50%; */
+        position: relative;
         max-width: 50%;
     }
+
+    .button-previous,
+    .button-next {
+        display: initial!important; /*ojo acá*/
+    }
+
+    .button-close{
+        position: absolute;
+        right: 0;
+        top: -50px;
+        max-width: 30px;
+        border: none;
+        background: none;
+    }
+    
+    .button-close img {
+        width: 20px;
+    }
+
+    .product-images .thumbnails-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
 }
 
+.close {
+    display: none;
+}
 
 @media screen and (width >=800px) {
     .product-container {
